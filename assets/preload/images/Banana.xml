@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Banana.png"><SubTexture name="Banana bounce0000" x="0" y="0" width="518" height="512" frameX="0" frameY="0" frameWidth="518" frameHeight="512" />
+<SubTexture name="Banana bounce0001" x="518" y="0" width="518" height="512" frameX="0" frameY="0" frameWidth="518" frameHeight="512" />
+<SubTexture name="Banana bounce0002" x="1036" y="0" width="518" height="512" frameX="0" frameY="0" frameWidth="518" frameHeight="512" />
+<SubTexture name="Banana bounce0003" x="1554" y="0" width="518" height="512" frameX="0" frameY="0" frameWidth="518" frameHeight="512" />
+<SubTexture name="Banana bounce0004" x="0" y="512" width="518" height="512" frameX="0" frameY="0" frameWidth="518" frameHeight="512" />
+</TextureAtlas>

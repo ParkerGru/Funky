@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="kong.png"><SubTexture name="kong idle0000" x="0" y="0" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0001" x="1034" y="0" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0002" x="2068" y="0" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0003" x="3102" y="0" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0004" x="0" y="825" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0005" x="1034" y="825" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0006" x="2068" y="825" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong idle0007" x="3102" y="825" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong down0000" x="0" y="1650" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong down0001" x="1034" y="1650" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong down0002" x="2068" y="1650" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong left0000" x="3102" y="1650" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong left0001" x="0" y="2475" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong left0002" x="1034" y="2475" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong right0000" x="2068" y="2475" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong right0001" x="3102" y="2475" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong right0002" x="0" y="3300" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong up0000" x="1034" y="3300" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong up0001" x="2068" y="3300" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+<SubTexture name="kong up0002" x="3102" y="3300" width="1034" height="825" frameX="0" frameY="0" frameWidth="1034" frameHeight="825" />
+</TextureAtlas>
