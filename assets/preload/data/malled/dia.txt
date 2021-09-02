@@ -1,9 +1,9 @@
-dad:Hey You!
-bf:beee?!
-dad:You must be new around here!
-bf:Beep!
-dad:Ive been competin' here for the last 13 years dawg and I havent seen a single new face since then
-bf:Skoop?
-dad:You want me to funk with YOU... I mean it's in my name
-bf:badoop!!
-dad:Ok ok im in! but just a warning brotha... im not going easy on you!
+:dad:Hey You!
+:bf:beee?!
+:dad:You must be new around here!
+:bf:Beep!
+:dad:Ive been competin' here for the last 13 years dawg and I havent seen a single new face since then
+:bf:Skoop?
+:dad:You want me to funk with YOU... I mean it's in my name
+:bf:badoop!!
+:dad:Ok ok im in! but just a warning brotha... im not going easy on you!
