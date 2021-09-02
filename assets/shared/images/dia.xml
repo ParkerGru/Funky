@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="dia.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="text box appear0000" x="0" y="0" width="0" height="0" frameX="0" frameY="-451" frameWidth="1280" frameHeight="720"/>
+	<SubTexture name="text box appear0001" x="10" y="0" width="1280" height="720"/>
+	<SubTexture name="text box appear0002" x="10" y="0" width="1280" height="720"/>
+	<SubTexture name="text box appear0003" x="10" y="0" width="1280" height="720"/>
+	<SubTexture name="text box appear0004" x="10" y="0" width="1280" height="720"/>
+	<SubTexture name="text box appear0005" x="10" y="0" width="1280" height="720"/>
+	<SubTexture name="text box appear0006" x="10" y="0" width="1280" height="720"/>
+</TextureAtlas>
