@@ -14,7 +14,7 @@ class OutdatedSubState extends MusicBeatState
 {
 	public static var leftState:Bool = false;
 
-	public static var needVer:String = "IDFK LOL";
+	public static var needVer:String = "1.5";
 	public static var currChanges:String = "dk";
 	
 	private var bgColors:Array<String> = [
