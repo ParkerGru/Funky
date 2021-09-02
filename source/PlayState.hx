@@ -128,6 +128,7 @@ class PlayState extends MusicBeatState
 	public var health:Float = 1; //making public because sethealth doesnt work without it
 	private var combo:Int = 0;
 	public static var misses:Int = 0;
+	public var grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 	private var accuracy:Float = 0.00;
 	private var accuracyDefault:Float = 0.00;
 	private var totalNotesHit:Float = 0;
@@ -296,6 +297,11 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.reset(camGame);
 		FlxG.cameras.add(camHUD);
 
+		
+		var tempNoteSplash = new NoteSplash(0, 0, 0);
+		grpNoteSplashes.add(tempNoteSplash);
+		tempNoteSplash.alpha = 0.1;
+
 		FlxCamera.defaultCameras = [camGame];
 
 		persistentUpdate = true;
@@ -335,6 +341,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
+			case 'malled':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('malled/dia'));
 		}
 
 		switch(SONG.stage)
@@ -755,8 +763,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'funky':
-				dad.x += 287;
-				dad.y += 21;
+				dad.x += 272;
+				dad.y += 31;
 		}
 
 
@@ -838,6 +846,8 @@ class PlayState extends MusicBeatState
 		strumLineNotes = new FlxTypedGroup<FlxSprite>();
 		add(strumLineNotes);
 
+		add(grpNoteSplashes);
+
 		playerStrums = new FlxTypedGroup<FlxSprite>();
 		cpuStrums = new FlxTypedGroup<FlxSprite>();
 
@@ -902,7 +912,7 @@ class PlayState extends MusicBeatState
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
 			'health', 0, 2);
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		healthBar.createFilledBar(FlxColor.fromString('#' + dad.iconColor), FlxColor.fromString('#' + boyfriend.iconColor));
 		// healthBar
 		add(healthBar);
 
@@ -947,6 +957,7 @@ class PlayState extends MusicBeatState
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
 
+		grpNoteSplashes.cameras = [camHUD];
 		strumLineNotes.cameras = [camHUD];
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
@@ -1009,6 +1020,8 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'thorns':
+					schoolIntro(doof);
+				case 'malled':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -2571,6 +2584,9 @@ class PlayState extends MusicBeatState
 						health += 0.1;
 					if (FlxG.save.data.accuracyMod == 0)
 						totalNotesHit += 1;
+					var bruhSplash:NoteSplash = grpNoteSplashes.recycle(NoteSplash);
+					bruhSplash.setupNoteSplash(daNote.noteData, daNote.x, strumLine.y);
+					grpNoteSplashes.add(bruhSplash);
 					sicks++;
 			}
 

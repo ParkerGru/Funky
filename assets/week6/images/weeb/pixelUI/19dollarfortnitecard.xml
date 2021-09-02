@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="19dollarfortnitecard.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="OLDopen0000" x="0" y="0" width="1279" height="719"/>
+	<SubTexture name="OLDopen0001" x="1279" y="0" width="1279" height="719"/>
+	<SubTexture name="OLDopen0002" x="2558" y="0" width="1279" height="719"/>
+	<SubTexture name="OLDopen0003" x="0" y="719" width="1279" height="719"/>
+	<SubTexture name="OLDopen0004" x="1279" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0000" x="2558" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0001" x="2558" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0002" x="2558" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0003" x="2558" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0004" x="2558" y="719" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0005" x="0" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0006" x="0" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0007" x="0" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0008" x="0" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0009" x="0" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0010" x="1279" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0011" x="1279" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0012" x="1279" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0013" x="1279" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0014" x="1279" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0015" x="2558" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0016" x="2558" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0017" x="2558" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0018" x="2558" y="1438" width="1279" height="719"/>
+	<SubTexture name="text box ANIMATE0019" x="2558" y="1438" width="1279" height="719"/>
+</TextureAtlas>

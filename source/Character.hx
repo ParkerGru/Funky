@@ -16,6 +16,7 @@ class Character extends FlxSprite
 	public var curCharacter:String = 'bf';
 
 	public var holdTimer:Float = 0;
+	public var iconColor:String = 'FF005C9E';
 
 	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false)
 	{
@@ -323,6 +324,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+				iconColor = "#005C9E";
 
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
@@ -514,6 +516,33 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+		}
+		// HEALTHBAR COLORS FOR EACH CHARACTER
+        switch (curCharacter){
+            case 'bf' | 'bf-car' | 'bf-pixel' | 'bf-christmas':
+                iconColor = 'FF31B0D1';
+            case 'gf' | 'gf-car' | 'gf-pixel' | 'gf-christmas':
+                iconColor = 'FF31B0D1';
+            case 'dad':
+                iconColor = 'FFAF66CE';
+            case 'spooky':
+                iconColor = 'FFC79551';
+            case 'monster' | 'monster-christmas':
+                iconColor = 'FFF3FF6E';
+            case 'pico':
+                iconColor = 'FFB7D855';
+            case 'mom' | 'mom-car':
+                iconColor = 'FFD8558E';
+            case 'parents-christmas':
+                iconColor = 'FFCA5AA5';
+            case 'senpai' | 'senpai-angry':
+                iconColor = 'FFFFAA6F'; 
+            case 'spirit':
+                iconColor = 'FFFF3C6E';
+			case 'funky':
+				iconColor = 'FFA500'; 
+            default:
+                iconColor = 'FFA1A1A1';
 		}
 
 		dance();

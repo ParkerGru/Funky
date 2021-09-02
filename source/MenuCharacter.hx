@@ -21,7 +21,6 @@ class CharacterSetting
 
 class MenuCharacter extends FlxSprite
 {
-	public var shitass:FlxSprite;
 	private static var settings:Map<String, CharacterSetting> = [
 		'bf' => new CharacterSetting(0, -20, 1.0, true),
 		'gf' => new CharacterSetting(50, 80, 1.5, true),
@@ -31,7 +30,7 @@ class MenuCharacter extends FlxSprite
 		'mom' => new CharacterSetting(-30, 140, 0.85),
 		'parents-christmas' => new CharacterSetting(100, 130, 1.8),
 		'senpai' => new CharacterSetting(-40, -45, 1.4),
-		'funky' => new CharacterSetting(-37, -45, 1.2)
+		'funky' => new CharacterSetting(-59, -49, 1.9)
 	];
 
 	private var flipped:Bool = false;
@@ -44,7 +43,6 @@ class MenuCharacter extends FlxSprite
 		antialiasing = true;
 
 		frames = Paths.getSparrowAtlas('campaign_menu_UI_characters');
-		shitass.loadGraphic('images/Banana.png');
 
 		animation.addByPrefix('bf', "BF idle dance white", 24);
 		animation.addByPrefix('bfConfirm', 'BF HEY!!', 24, false);
@@ -55,7 +53,7 @@ class MenuCharacter extends FlxSprite
 		animation.addByPrefix('mom', "Mom Idle BLACK LINES", 24);
 		animation.addByPrefix('parents-christmas', "Parent Christmas Idle", 24);
 		animation.addByPrefix('senpai', "SENPAI idle Black Lines", 24);
-		shitass.animation.addByPrefix('funky', "Banana bounce", 24);
+		animation.addByPrefix('funky', "banana", 24);
 
 		
 
@@ -77,7 +75,7 @@ class MenuCharacter extends FlxSprite
 		}
 
 		animation.play(character);
-		shitass.animation.play(character);
+		
 
 		var setting:CharacterSetting = settings[character];
 		offset.set(setting.x, setting.y);
