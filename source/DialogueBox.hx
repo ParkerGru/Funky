@@ -251,6 +251,79 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
+				FlxG.sound.play(Paths.sound('1', 'shared'), 0.8);
+
+				case 'dad2':
+					portraitRight.visible = false;
+					if (!portraitLeft.visible)
+					{
+						portraitLeft.visible = true;
+						portraitLeft.animation.play('enter');
+					}
+					FlxG.sound.play(Paths.sound('2', 'shared'), 0.8);
+
+					case 'dad3':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('3', 'shared'), 0.8);
+
+				case 'dad4':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+			    FlxG.sound.play(Paths.sound('4', 'shared'), 0.8);
+
+				case 'dad5':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('5', 'shared'), 0.8);
+
+				case 'dad6':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('6', 'shared'), 0.8);
+
+				case 'dad7':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('7', 'shared'), 0.8);
+
+				case 'dad8':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('8', 'shared'), 0.8);
+				case 'dad9':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('9', 'shared'), 0.8);
+
 			case 'bf':
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)

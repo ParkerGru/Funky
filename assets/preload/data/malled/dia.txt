@@ -1,9 +1,13 @@
-:dad:Hey You!
-:bf:beee?!
-:dad:You must be new around here!
-:bf:Beep!
-:dad:Ive been competin' here for the last 13 years dawg and I havent seen a single new face since then
+:dad:Hey, you!
+:bf:Beee?!
+:dad2:You must be new around here!
+:bf:Bap!
+:dad3:I've been competin' here for the last 13 years, dawg.
+:dad4:I haven't seen a single new face since then!
 :bf:Skoop?
-:dad:You want me to funk with YOU... I mean it's in my name
+:dad5:You want me to funk with YOU?
+:dad6:I mean, it's in my name! y'know?
 :bf:badoop!!
-:dad:Ok ok im in! but just a warning brotha... im not going easy on you!
+:dad7:Okay, okay, I'm in!
+:dad8:But, just a warning, brotha...
+:dad9:I'm not going easy on you!

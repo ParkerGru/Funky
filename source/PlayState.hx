@@ -671,14 +671,14 @@ class PlayState extends MusicBeatState
 			}
 			case 'stage':
 				{
-						defaultCamZoom = 0.9;
+						defaultCamZoom = 0.88;
 						curStage = 'stage';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('BKGRND'));
+						var bg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('BKGRND'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(0.9, 0.9);
 						bg.active = false;
 						add(bg);
-						var fg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('FRGRND'));
+						var fg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('FRGRND'));
 						fg.antialiasing = true;
 						fg.scrollFactor.set(0.9, 0.9);
 						fg.active = false;
@@ -690,7 +690,7 @@ class PlayState extends MusicBeatState
 
 			default:
 			{
-				defaultCamZoom = 0.9;
+				defaultCamZoom = 0.88;
 				curStage = 'stage';
 				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('BKGRND'));
 				bg.antialiasing = true;
@@ -764,7 +764,7 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'funky':
 				dad.x += 272;
-				dad.y += 31;
+				dad.y += 12;
 		}
 
 
@@ -774,6 +774,10 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+			case 'stage':
+				dad.x -= 690;
+				dad.y -= 25;
+
 			case 'limo':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;
@@ -2064,6 +2068,9 @@ class PlayState extends MusicBeatState
 
 				switch (curStage)
 				{
+					case 'stage': 
+						camFollow.y = boyfriend.getMidpoint().y - 200;
+						camFollow.x = boyfriend.getMidpoint().x - 400;
 					case 'limo':
 						camFollow.x = boyfriend.getMidpoint().x - 300;
 					case 'mall':
