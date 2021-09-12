@@ -63,6 +63,8 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
+				scale.set(0.95, 0.95);
+
 			case 'gf-christmas':
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
 				frames = tex;

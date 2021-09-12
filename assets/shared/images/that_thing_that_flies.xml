@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="that_thing_that_flies.png">
+<SubTexture name="forgot its name idle0000" x="0" y="0" width="161" height="145" frameX="0" frameY="0" frameWidth="161" frameHeight="145" />
+<SubTexture name="forgot its name idle0001" x="161" y="0" width="161" height="145" frameX="0" frameY="0" frameWidth="161" frameHeight="145" />
+</TextureAtlas>

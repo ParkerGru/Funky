@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="daisy.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="daisy omfg she is so cute0000" x="0" y="0" width="457" height="719" pivotX="-69.95" pivotY="351.1"/>
+	<SubTexture name="daisy omfg she is so cute0001" x="0" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0002" x="457" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0003" x="457" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0004" x="914" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0005" x="914" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0006" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0007" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0008" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0009" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0010" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0011" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0012" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0013" x="1371" y="0" width="457" height="719"/>
+	<SubTexture name="daisy omfg she is so cute0014" x="1371" y="0" width="457" height="719"/>
+</TextureAtlas>

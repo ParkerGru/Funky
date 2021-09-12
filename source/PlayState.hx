@@ -79,6 +79,7 @@ class PlayState extends MusicBeatState
 	public static var bads:Int = 0;
 	public static var goods:Int = 0;
 	public static var sicks:Int = 0;
+	private var floatshit:Float = 0;
 
 	public static var songPosBG:FlxSprite;
 	public static var songPosBar:FlxBar;
@@ -343,6 +344,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));
 			case 'malled':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('malled/dia'));
+				case 'bananas':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('bananas/funkyass'));
 		}
 
 		switch(SONG.stage)
@@ -671,38 +674,73 @@ class PlayState extends MusicBeatState
 			}
 			case 'stage':
 				{
-						defaultCamZoom = 0.88;
+						defaultCamZoom = 0.95;
+						curStage = 'stage';
+						var bg:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('BKGRND'));
+						bg.antialiasing = true;
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+						var guy:FlxSprite = new FlxSprite(-200, -90);
+					    guy.frames = Paths.getSparrowAtlas('idk_this_guy', 'shared');
+					    guy.animation.addByPrefix('idle', 'idk this guys name', 24);
+						guy.animation.play('idle');
+						add(guy);
+						var fg:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('FRGRND'));
+						fg.antialiasing = true;
+						fg.scrollFactor.set(0.9, 0.9);
+						fg.active = false;
+						add(fg);
+						var koopa:FlxSprite = new FlxSprite(100, 120);
+						koopa.scale.set(0.5,0.5);
+				        koopa.frames = Paths.getSparrowAtlas('that_thing_that_flies', 'shared');
+				        koopa.animation.addByPrefix('idle', 'forgot its name idle', 24);
+				        koopa.animation.play('idle');
+						var daisy:FlxSprite = new FlxSprite(100, 120);
+						daisy.scale.set(0.5,0.5);
+				        daisy.frames = Paths.getSparrowAtlas('daisy', 'shared');
+				        daisy.animation.addByPrefix('idle', 'daisy omfg she is so cute', 24);
+				        daisy.animation.play('idle');
+						switch(curSong)
+		                {
+			             case 'Bananas' | 'Ultra-Shortcut': 
+							 add(koopa);
+					 		 add(daisy);
+
+			              
+		                }
+					}
+			
+
+
+
+			default:
+			{
+				        defaultCamZoom = 0.95;
 						curStage = 'stage';
 						var bg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('BKGRND'));
 						bg.antialiasing = true;
 						bg.scrollFactor.set(0.9, 0.9);
 						bg.active = false;
 						add(bg);
+						var guy:FlxSprite = new FlxSprite(-200, -190);
+					    guy.frames = Paths.getSparrowAtlas('idk_this_guy', 'shared');
+					    guy.animation.addByPrefix('idle', 'idk this guys name', 24);
+						guy.animation.play('idle');
+						add(guy);
 						var fg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('FRGRND'));
 						fg.antialiasing = true;
 						fg.scrollFactor.set(0.9, 0.9);
 						fg.active = false;
 						add(fg);
-	
-				}
+						var koopa:FlxSprite = new FlxSprite(250, 73);
+						koopa.scale.set(1.5,1.5);
+				        koopa.frames = Paths.getSparrowAtlas('that_thing_that_flies', 'shared');
+				        koopa.animation.addByPrefix('idle', 'forgot its name idle', 24);
+				        koopa.animation.play('idle');
+						FlxTween.tween(koopa, { x: 0, y: 600 }, 2, { type: FlxTweenType.PINGPONG, ease: FlxEase.circInOut, loopDelay: 0});
 
-
-
-			default:
-			{
-				defaultCamZoom = 0.88;
-				curStage = 'stage';
-				var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('BKGRND'));
-				bg.antialiasing = true;
-				bg.scrollFactor.set(0.9, 0.9);
-				bg.active = false;
-				add(bg);
-				var fg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('FRGRND'));
-				fg.antialiasing = true;
-				fg.scrollFactor.set(0.9, 0.9);
-				fg.active = false;
-				add(fg);
-
+				        
 			}
 		}
 		var gfVersion:String = 'gf';
@@ -737,6 +775,8 @@ class PlayState extends MusicBeatState
 					tweenCamIn();
 				}
 
+				
+
 			case "spooky":
 				dad.y += 200;
 			case "monster":
@@ -763,8 +803,8 @@ class PlayState extends MusicBeatState
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'funky':
-				dad.x += 272;
-				dad.y += 12;
+				dad.x -= 72;
+				dad.y += -102;
 		}
 
 
@@ -777,6 +817,10 @@ class PlayState extends MusicBeatState
 			case 'stage':
 				dad.x -= 690;
 				dad.y -= 25;
+				boyfriend.x -= 195;
+				boyfriend.y -= 98;
+				gf.x -= 299;
+				gf.y -= 192;
 
 			case 'limo':
 				boyfriend.y -= 220;
@@ -878,7 +922,7 @@ class PlayState extends MusicBeatState
 		FlxG.camera.zoom = defaultCamZoom;
 		FlxG.camera.focusOn(camFollow.getPosition());
 
-		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
+		FlxG.worldBounds.set(0, 0, FlxG.width * 1.9, FlxG.height);
 
 		FlxG.fixedTimestep = false;
 
@@ -1026,6 +1070,8 @@ class PlayState extends MusicBeatState
 				case 'thorns':
 					schoolIntro(doof);
 				case 'malled':
+					schoolIntro(doof);
+					case 'bananas':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -1384,52 +1430,54 @@ class PlayState extends MusicBeatState
 			var coolSection:Int = Std.int(section.lengthInSteps / 4);
 
 			for (songNotes in section.sectionNotes)
-			{
-				var daStrumTime:Float = songNotes[0] + FlxG.save.data.offset + songOffset;
-				if (daStrumTime < 0)
-					daStrumTime = 0;
-				var daNoteData:Int = Std.int(songNotes[1] % 4);
-
-				var gottaHitNote:Bool = section.mustHitSection;
-
-				if (songNotes[1] > 3)
 				{
-					gottaHitNote = !section.mustHitSection;
-				}
-
-				var oldNote:Note;
-				if (unspawnNotes.length > 0)
-					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
-				else
-					oldNote = null;
-
-				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
-				swagNote.sustainLength = songNotes[2];
-				swagNote.scrollFactor.set(0, 0);
-
+					var daStrumTime:Float = songNotes[0] + FlxG.save.data.offset + songOffset;
+					if (daStrumTime < 0)
+						daStrumTime = 0;
+					var daNoteData:Int = Std.int(songNotes[1] % 4);
+ 
+					var gottaHitNote:Bool = section.mustHitSection;
+ 
+					if (songNotes[1] > 3)
+					{
+						gottaHitNote = !section.mustHitSection;
+					}
+ 
+					var oldNote:Note;
+					if (unspawnNotes.length > 0)
+						oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
+					else
+						oldNote = null;
+ 
+					var daType = songNotes[3];
+					var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, false, daType);
+					swagNote.sustainLength = songNotes[2];
+ 
+					swagNote.scrollFactor.set(0, 0);	
+ 
 				var susLength:Float = swagNote.sustainLength;
-
+ 
 				susLength = susLength / Conductor.stepCrochet;
 				unspawnNotes.push(swagNote);
-
+ 
 				for (susNote in 0...Math.floor(susLength))
 				{
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
-
+ 
 					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, true);
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
-
+ 
 					sustainNote.mustPress = gottaHitNote;
-
+ 
 					if (sustainNote.mustPress)
 					{
 						sustainNote.x += FlxG.width / 2; // general offset
 					}
 				}
-
+ 
 				swagNote.mustPress = gottaHitNote;
-
+ 
 				if (swagNote.mustPress)
 				{
 					swagNote.x += FlxG.width / 2; // general offset
@@ -1678,6 +1726,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		floatshit += 0.05;
 		#if !debug
 		perfectMode = false;
 		#end
@@ -2359,7 +2408,7 @@ class PlayState extends MusicBeatState
 					if ((daNote.mustPress && daNote.tooLate && !FlxG.save.data.downscroll || daNote.mustPress && daNote.tooLate && FlxG.save.data.downscroll) && daNote.mustPress)
 					{
 						switch (daNote.noteType) {
-							case 'shells':
+							case 2:
 								//do nothing lol
 
 							default:
@@ -3188,8 +3237,9 @@ class PlayState extends MusicBeatState
 						totalNotesHit += 1;
 
 					switch (note.noteType) {
-						case 'shells':
+						case 2:
 							health -= 0.3;
+							FlxG.sound.play(Paths.sound('shellouch'));
 					}
 	
 

@@ -47,7 +47,10 @@ class DialogueBox extends FlxSpriteGroup
 				FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 				case 'malled':
-				FlxG.sound.playMusic(Paths.music('ambience', 'shared'), 0);
+				FlxG.sound.playMusic(Paths.music('funky_mode', 'shared'), 0);
+				FlxG.sound.music.fadeIn(1, 0, 0.8);
+				case 'bananas':
+				FlxG.sound.playMusic(Paths.music('funky_mode', 'shared'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
@@ -98,7 +101,17 @@ class DialogueBox extends FlxSpriteGroup
 				box.animation.add('normalOpen',[0], 24, false);
 				box.animation.add('normal', [0], 24);
 				box.setPosition();
-				box.setGraphicSize(Std.int( box.width * PlayState.daPixelZoom * 1.1));
+				box.setGraphicSize(Std.int( box.width * PlayState.daPixelZoom * 1.2));
+				PlayState.daPixelZoom = 1;
+
+				case 'bananas':
+				box = new FlxSprite(0, 40);
+				hasDialog = true;
+				box.loadGraphic(Paths.image('dia', 'shared'));
+				box.animation.add('normalOpen',[0], 24, false);
+				box.animation.add('normal', [0], 24);
+				box.setPosition();
+				box.setGraphicSize(Std.int( box.width * PlayState.daPixelZoom * 1.2));
 				PlayState.daPixelZoom = 1;
 
 		}
@@ -251,7 +264,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('1', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('1_malled', 'shared'), 0.8);
 
 				case 'dad2':
 					portraitRight.visible = false;
@@ -260,7 +273,7 @@ class DialogueBox extends FlxSpriteGroup
 						portraitLeft.visible = true;
 						portraitLeft.animation.play('enter');
 					}
-					FlxG.sound.play(Paths.sound('2', 'shared'), 0.8);
+					FlxG.sound.play(Paths.sound('2_malled', 'shared'), 0.8);
 
 					case 'dad3':
 				portraitRight.visible = false;
@@ -269,7 +282,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('3', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('3_malled', 'shared'), 0.8);
 
 				case 'dad4':
 				portraitRight.visible = false;
@@ -278,7 +291,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-			    FlxG.sound.play(Paths.sound('4', 'shared'), 0.8);
+			    FlxG.sound.play(Paths.sound('4_malled', 'shared'), 0.8);
 
 				case 'dad5':
 				portraitRight.visible = false;
@@ -287,7 +300,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('5', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('5_malled', 'shared'), 0.8);
 
 				case 'dad6':
 				portraitRight.visible = false;
@@ -296,7 +309,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('6', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('6_malled', 'shared'), 0.8);
 
 				case 'dad7':
 				portraitRight.visible = false;
@@ -305,7 +318,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('7', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('7_malled', 'shared'), 0.8);
 
 				case 'dad8':
 				portraitRight.visible = false;
@@ -314,7 +327,7 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('8', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('8_malled', 'shared'), 0.8);
 				case 'dad9':
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
@@ -322,7 +335,104 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 				}
-				FlxG.sound.play(Paths.sound('9', 'shared'), 0.8);
+				FlxG.sound.play(Paths.sound('9_malled', 'shared'), 0.8);
+			/* ______________________________________________________________________________________*/
+			case 'dad10':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('1_bananas', 'shared'), 0.8);
+
+				case 'dad11':
+					portraitRight.visible = false;
+					if (!portraitLeft.visible)
+					{
+						portraitLeft.visible = true;
+						portraitLeft.animation.play('enter');
+					}
+					FlxG.sound.play(Paths.sound('2_bananas', 'shared'), 0.8);
+
+					case 'dad12':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('3_bananas', 'shared'), 0.8);
+
+				case 'dad13':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+			    FlxG.sound.play(Paths.sound('4_bananas', 'shared'), 0.8);
+
+				case 'dad14':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('5_bananas', 'shared'), 0.8);
+
+				case 'dad15':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('6_bananas', 'shared'), 0.8);
+
+				case 'dad16':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('7_bananas', 'shared'), 0.8);
+
+				case 'dad17':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('8_bananas', 'shared'), 0.8);
+				case 'dad18':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('9_bananas', 'shared'), 0.8);
+				case 'dad19':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('10_bananas', 'shared'), 0.8);
+				case 'dad20':
+				portraitRight.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('11_bananas', 'shared'), 0.8);
+
 
 			case 'bf':
 				portraitLeft.visible = false;
