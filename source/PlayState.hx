@@ -163,6 +163,7 @@ class PlayState extends MusicBeatState
 	var phillyCityLights:FlxTypedGroup<FlxSprite>;
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
+	var more:FlxSprite;
 
 	var limo:FlxSprite;
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
@@ -346,6 +347,8 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('malled/dia'));
 				case 'bananas':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('bananas/funkyass'));
+				case 'ultra-shortcut':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('ultra-shortcut/pee'));
 		}
 
 		switch(SONG.stage)
@@ -674,75 +677,204 @@ class PlayState extends MusicBeatState
 			}
 			case 'stage':
 				{
-						defaultCamZoom = 0.95;
-						curStage = 'stage';
-						var bg:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('BKGRND'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
-						var guy:FlxSprite = new FlxSprite(-200, -90);
-					    guy.frames = Paths.getSparrowAtlas('idk_this_guy', 'shared');
-					    guy.animation.addByPrefix('idle', 'idk this guys name', 24);
-						guy.animation.play('idle');
-						add(guy);
-						var fg:FlxSprite = new FlxSprite(-800, -200).loadGraphic(Paths.image('FRGRND'));
-						fg.antialiasing = true;
-						fg.scrollFactor.set(0.9, 0.9);
-						fg.active = false;
-						add(fg);
-						var koopa:FlxSprite = new FlxSprite(100, 120);
-						koopa.scale.set(0.5,0.5);
-				        koopa.frames = Paths.getSparrowAtlas('that_thing_that_flies', 'shared');
-				        koopa.animation.addByPrefix('idle', 'forgot its name idle', 24);
-				        koopa.animation.play('idle');
-						var daisy:FlxSprite = new FlxSprite(100, 120);
-						daisy.scale.set(0.5,0.5);
-				        daisy.frames = Paths.getSparrowAtlas('daisy', 'shared');
-				        daisy.animation.addByPrefix('idle', 'daisy omfg she is so cute', 24);
-				        daisy.animation.play('idle');
-						switch(curSong)
-		                {
-			             case 'Bananas' | 'Ultra-Shortcut': 
-							 add(koopa);
-					 		 add(daisy);
-
-			              
-		                }
+					defaultCamZoom = 0.96;
+					curStage = 'stage';
+					var bg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('BKGRND', 'shared'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
+				
+					var royboi:FlxSprite = new FlxSprite(-650, 50);
+					royboi.frames = Paths.getSparrowAtlas('roy', 'shared');
+					royboi.animation.addByPrefix('idle', 'roy koopa', 24);
+					royboi.animation.play('idle');
+					var more:FlxSprite = new FlxSprite(-650, -120);
+					more.frames = Paths.getSparrowAtlas('other_funny_guys', 'shared');
+					more.animation.addByPrefix('idle', 'Symbol 7 instance 10000', 24);
+					more.animation.play('idle');
+					var koopa:FlxSprite = new FlxSprite(-650, -90);
+					koopa.frames = Paths.getSparrowAtlas('fly_to_da_fuckin_fuck_fuckable_fucking_fuck_fuckin_sky', 'shared');
+					koopa.animation.addByPrefix('idle', 'fly to da sky instance 1', 24);
+					koopa.animation.play('idle');
+					koopa.scale.set(1.5, 1.5);
+					var guys:FlxSprite = new FlxSprite(-650, -90);
+					guys.frames = Paths.getSparrowAtlas('funi_fellas', 'shared');
+					guys.animation.addByPrefix('idle', 'funi guys instance 1', 24);
+					guys.animation.play('idle');
+					FlxTween.tween(koopa, { x: 0, y: 600 }, 2, { type: FlxTweenType.PINGPONG, ease: FlxEase.circIn, loopDelay: 0});
+					switch(curSong)
+					{
+					  case 'Bananas':
+						  {
+							  add(guys);
+							  add(koopa);
+						  }
+						case 'Ultra-Shortcut':
+							{
+							add(guys);
+							add(koopa);
+							add(more);
+							add(royboi);
+							}
 					}
-			
+					var fg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('FRGRND', 'shared'));
+					fg.antialiasing = true;
+					fg.scrollFactor.set(0.9, 0.9);
+					fg.active = false;
+					add(fg);
+					
+				}
+						
+				case 'coconut':
+					{
+							defaultCamZoom = 1.1;
+							curStage = 'coconut';
+							var bg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('BKGRND', 'shared'));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
+							var fg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('FRGRND', 'shared'));
+							fg.antialiasing = true;
+							fg.scrollFactor.set(0.9, 0.9);
+							fg.active = false;
+							add(fg);
+						}
 
+				case 'mall-bananas':
+					{
+							defaultCamZoom = 1.1;
+							curStage = 'mall-bananas';
+							var bg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('BKGRND', 'shared'));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
+							var royboi:FlxSprite = new FlxSprite(-650, -80);
+							royboi.frames = Paths.getSparrowAtlas('roy', 'shared');
+							royboi.animation.addByPrefix('idle', 'roy koopa', 24);
+							royboi.animation.play('idle');
+							royboi.antialiasing = true;
+							
+							var more:FlxSprite = new FlxSprite(-250, -40);
+							more.frames = Paths.getSparrowAtlas('other_funny_guys', 'shared');
+							more.animation.addByPrefix('idle', 'Symbol 7 instance 10000', 24);
+							more.animation.play('idle');
+							more.scale.set(1.5, 1.5);
+							more.antialiasing = true;
+							
+							
+							var guys:FlxSprite = new FlxSprite(-370, -8);
+							guys.frames = Paths.getSparrowAtlas('funi_fellas', 'shared');
+							guys.animation.addByPrefix('idle', 'funi guys instance 1', 24);
+							guys.animation.play('idle');
+							guys.scale.set(1.5, 1.5);
+							guys.antialiasing = true;
+							
+							add(guys);
+							
 
+						
+							var fg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('FRGRND', 'shared'));
+							fg.antialiasing = true;
+							fg.scrollFactor.set(0.9, 0.9);
+							fg.active = false;
+							add(fg);
+						}
+
+						case 'ItsTBaby':
+							{
+							defaultCamZoom = 1.1;
+							curStage = 'ItsTBaby';
+							var bg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('BKGRND', 'shared'));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
+							var royboi:FlxSprite = new FlxSprite(-650, 170);
+							royboi.frames = Paths.getSparrowAtlas('roy', 'shared');
+							royboi.animation.addByPrefix('idle', 'roy koopa', 24);
+							royboi.animation.play('idle');
+							royboi.antialiasing = true;
+							
+							var more:FlxSprite = new FlxSprite(470, -170);
+							more.frames = Paths.getSparrowAtlas('daisy', 'shared');
+							more.animation.addByPrefix('idle', 'daisy omfg she is so cute', 24);
+							more.animation.play('idle');
+							more.antialiasing = true;
+
+							var mattdo:FlxSprite = new FlxSprite(690, 200);
+							mattdo.frames = Paths.getSparrowAtlas('matt_and_birdo_funi', 'shared');
+							 mattdo.animation.addByPrefix('idle', 'these guys are built different ngl', 24);
+							mattdo.animation.play('idle');
+							mattdo.antialiasing = true;
+							
+							
+							var guys:FlxSprite = new FlxSprite(-370, -8);
+							guys.frames = Paths.getSparrowAtlas('funi_fellas', 'shared');
+							guys.animation.addByPrefix('idle', 'funi guys instance 1', 24);
+							guys.animation.play('idle');
+							guys.scale.set(1.5, 1.5);
+							guys.antialiasing = true;
+					
+					add(guys);
+					
+					
+				
+					var fg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('FRGRND', 'shared'));
+					fg.antialiasing = true;
+					fg.scrollFactor.set(0.9, 0.9);
+					fg.active = false;
+					add(more);
+					add(mattdo);
+					add(fg);
+					add(royboi);
+				 }
 
 			default:
 			{
-				        defaultCamZoom = 0.95;
-						curStage = 'stage';
-						var bg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('BKGRND'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
-						var guy:FlxSprite = new FlxSprite(-200, -190);
-					    guy.frames = Paths.getSparrowAtlas('idk_this_guy', 'shared');
-					    guy.animation.addByPrefix('idle', 'idk this guys name', 24);
-						guy.animation.play('idle');
-						add(guy);
-						var fg:FlxSprite = new FlxSprite(-200, -90).loadGraphic(Paths.image('FRGRND'));
-						fg.antialiasing = true;
-						fg.scrollFactor.set(0.9, 0.9);
-						fg.active = false;
-						add(fg);
-						var koopa:FlxSprite = new FlxSprite(250, 73);
-						koopa.scale.set(1.5,1.5);
-				        koopa.frames = Paths.getSparrowAtlas('that_thing_that_flies', 'shared');
-				        koopa.animation.addByPrefix('idle', 'forgot its name idle', 24);
-				        koopa.animation.play('idle');
-						FlxTween.tween(koopa, { x: 0, y: 600 }, 2, { type: FlxTweenType.PINGPONG, ease: FlxEase.circInOut, loopDelay: 0});
-
-				        
+					defaultCamZoom = 0.96;
+							curStage = 'stage';
+							var bg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('BKGRND', 'shared'));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(0.9, 0.9);
+							bg.active = false;
+							add(bg);
+							var royboi:FlxSprite = new FlxSprite(-650, 10);
+							royboi.frames = Paths.getSparrowAtlas('roy', 'shared');
+							royboi.animation.addByPrefix('idle', 'roy koopa', 24);
+							royboi.animation.play('idle');
+							royboi.antialiasing = true;
+							
+							var more:FlxSprite = new FlxSprite(450, 40);
+							more.frames = Paths.getSparrowAtlas('other_funny_guys', 'shared');
+							more.animation.addByPrefix('idle', 'Symbol 7 instance 1', 24);
+							more.animation.play('idle');
+							more.scale.set(1.3, 1.3);
+							more.antialiasing = true;
+							
+							
+							var guys:FlxSprite = new FlxSprite(-370, -8);
+							guys.frames = Paths.getSparrowAtlas('funi_fellas', 'shared');
+							guys.animation.addByPrefix('idle', 'funi guys instance 1', 24);
+							guys.animation.play('idle');
+							guys.scale.set(1.5, 1.5);
+							guys.antialiasing = true;
+					
+					add(guys);
+					add(more);
+					
+				
+					var fg:FlxSprite = new FlxSprite(-650, -90).loadGraphic(Paths.image('FRGRND', 'shared'));
+					fg.antialiasing = true;
+					fg.scrollFactor.set(0.9, 0.9);
+					fg.active = false;
+					add(fg);
+					add(royboi);
+				}
 			}
-		}
+
 		var gfVersion:String = 'gf';
 
 		switch (SONG.gfVersion)
@@ -814,6 +946,30 @@ class PlayState extends MusicBeatState
 		// REPOSITIONING PER STAGE
 		switch (curStage)
 		{
+			case 'coconut':
+				dad.x -= 690;
+				dad.y -= 25;
+				boyfriend.x -= 195;
+				boyfriend.y -= 74;
+				gf.x -= 299;
+				gf.y -= 192;
+
+				case 'ItsTBaby':
+				dad.x -= 690;
+				dad.y -= 25;
+				boyfriend.x -= 195;
+				boyfriend.y -= 74;
+				gf.x -= 299;
+				gf.y -= 192;
+
+				case 'mall-bananas':
+				dad.x -= 690;
+				dad.y -= 25;
+				boyfriend.x -= 195;
+				boyfriend.y -= 74;
+				gf.x -= 299;
+				gf.y -= 192;
+
 			case 'stage':
 				dad.x -= 690;
 				dad.y -= 25;
@@ -859,13 +1015,17 @@ class PlayState extends MusicBeatState
 		}
 
 		add(gf);
+        if(curStage == 'ItsTBaby') {
 
+			add(more);
+		}
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
 
 		add(dad);
 		add(boyfriend);
+
 		if (loadRep)
 		{
 			FlxG.watch.addQuick('rep rpesses',repPresses);
@@ -1072,6 +1232,8 @@ class PlayState extends MusicBeatState
 				case 'malled':
 					schoolIntro(doof);
 					case 'bananas':
+					schoolIntro(doof);
+					case 'ultra-shortcut':
 					schoolIntro(doof);
 				default:
 					startCountdown();

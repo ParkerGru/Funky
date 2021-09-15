@@ -408,16 +408,17 @@ class TitleState extends MusicBeatState
 			// credTextShit.screenCenter();
 			case 5:
 				if (Main.watermarks)
-					createCoolText(['Kade Engine', 'by']);
+					createCoolText(['In Partnership', 'with']);
 				else
 					createCoolText(['In Partnership', 'with']);
+				case 6: {
+
+				     deleteCoolText();
+
+				}
 			case 7:
-				if (Main.watermarks)
-					addMoreText('KadeDeveloper');
-				else
 				{
-					createCoolText(['Composer monke', 'and', 'Punkett']);
-					ngSpr.visible = true;
+				    createCoolText(['TheOnlyVolume', 'Julio', 'Punkett']);
 				}
 			// credTextShit.text += '\nNewgrounds';
 			case 8:
@@ -445,7 +446,7 @@ class TitleState extends MusicBeatState
 				addMoreText('Funky');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Demo'); // credTextShit.text += '\nFunkin';
+				addMoreText('Kong'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();

@@ -24,7 +24,7 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Malled', 'Bananas']
+		['Malled', 'Bananas', 'Ultra-Shortcut']
 	];
 	var curDifficulty:Int = 1;
 
@@ -280,7 +280,7 @@ class StoryMenuState extends MusicBeatState
 					diffic = '-hard';
 			}
 
-			PlayState.storyDifficulty = curDifficulty;
+			PlayState.storyDifficulty = 1;
 
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			PlayState.storyWeek = curWeek;

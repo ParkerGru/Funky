@@ -29,6 +29,8 @@ class DialogueBox extends FlxSpriteGroup
 	public var finishThing:Void->Void;
 
 	var portraitLeft:FlxSprite;
+	var portraitLeftagain:FlxSprite;
+	var portraitLeftAGAIN:FlxSprite;
 	var portraitRight:FlxSprite;
 
 	var handSelect:FlxSprite;
@@ -52,6 +54,7 @@ class DialogueBox extends FlxSpriteGroup
 				case 'bananas':
 				FlxG.sound.playMusic(Paths.music('funky_mode', 'shared'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
+
 		}
 
 		bgFade = new FlxSprite(-200, -200).makeGraphic(Std.int(FlxG.width * 1.3), Std.int(FlxG.height * 1.3), 0xFFB3DFd8);
@@ -114,6 +117,16 @@ class DialogueBox extends FlxSpriteGroup
 				box.setGraphicSize(Std.int( box.width * PlayState.daPixelZoom * 1.2));
 				PlayState.daPixelZoom = 1;
 
+				case 'ultra-shortcut':
+					box = new FlxSprite(0, 40);
+					hasDialog = true;
+					box.loadGraphic(Paths.image('dia', 'shared'));
+					box.animation.add('normalOpen',[0], 24, false);
+					box.animation.add('normal', [0], 24);
+					box.setPosition();
+					box.setGraphicSize(Std.int( box.width * PlayState.daPixelZoom * 1.2));
+					PlayState.daPixelZoom = 1;
+
 		}
 
 		this.dialogueList = dialogueList;
@@ -121,19 +134,40 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 
-		portraitLeft = new FlxSprite(62, -25);
+		portraitLeft = new FlxSprite(62, 40);
 		portraitLeft.loadGraphic(Paths.image('FK', 'shared'));
 		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 1.1));
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
+		portraitLeft.antialiasing = true;
 		add(portraitLeft);
 		portraitLeft.visible = false;
 
-		portraitRight = new FlxSprite(782, 120);
+		portraitLeftagain = new FlxSprite(62, -10);
+		portraitLeftagain.loadGraphic(Paths.image('FK_tired', 'shared'));
+		portraitLeftagain.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 1.1));
+		portraitLeftagain.updateHitbox();
+		portraitLeftagain.scrollFactor.set();
+		portraitLeftagain.antialiasing = true;
+		add(portraitLeftagain);
+		portraitLeftagain.visible = false;
+
+		portraitLeftAGAIN = new FlxSprite(77, 42);
+		portraitLeftAGAIN.loadGraphic(Paths.image('FK_tired_point', 'shared'));
+		portraitLeftAGAIN.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 1.1));
+		portraitLeftAGAIN.updateHitbox();
+		portraitLeftAGAIN.scrollFactor.set();
+		portraitLeftAGAIN.antialiasing = true;
+		add(portraitLeftAGAIN);
+		portraitLeftAGAIN.visible = false;
+		portraitLeftAGAIN.scale.set(1.2, 1.2);
+
+		portraitRight = new FlxSprite(782, 190);
 		portraitRight.loadGraphic(Paths.image('BF', 'shared'));
 		portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
 		portraitRight.updateHitbox();
 		portraitRight.scrollFactor.set();
+		portraitRight.antialiasing = true;
 		add(portraitRight);
 		portraitRight.visible = false;
 		
@@ -432,9 +466,81 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.animation.play('enter');
 				}
 				FlxG.sound.play(Paths.sound('11_bananas', 'shared'), 0.8);
+				/*____________________________________________________________________*/
+				case 'dadok':
+				portraitRight.visible = false;
+				if (!portraitLeftagain.visible)
+				{
+					portraitLeftagain.visible = true;
+					portraitLeftagain.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('1_shortcut', 'shared'), 0.8);
+
+				case 'dadthis':
+				portraitRight.visible = false;
+				if (!portraitLeftagain.visible)
+				{
+					portraitLeftagain.visible = true;
+					portraitLeftagain.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('2_shortcut', 'shared'), 0.8);
+
+				case 'dadis':
+				portraitRight.visible = false;
+				portraitLeftagain.visible = false;
+				if (!portraitLeftAGAIN.visible)
+				{
+					portraitLeftAGAIN.visible = true;
+					portraitLeftAGAIN.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('3_shortcut', 'shared'), 0.8);
+
+				case 'dadfr':
+				portraitRight.visible = false;
+				portraitLeftAGAIN.visible = false;
+				if (!portraitLeftagain.visible)
+				{
+					portraitLeftagain.visible = true;
+					portraitLeftagain.animation.play('enter');
+				}
+
+				
+				case 'dadover':
+				portraitLeftAGAIN.visible = false;
+				portraitRight.visible = false;
+				if (!portraitLeftagain.visible)
+				{
+					portraitLeftagain.visible = true;
+					portraitLeftagain.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('4_shortcut', 'shared'), 0.8);
+
+				case 'daddawg':
+				portraitRight.visible = false;
+				portraitLeftagain.visible = false;
+				if (!portraitLeftAGAIN.visible)
+				{
+					portraitLeftAGAIN.visible = true;
+					portraitLeftAGAIN.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('5_shortcut', 'shared'), 0.8);
+
+
+				case 'dadk':
+				portraitRight.visible = false;
+				portraitLeftAGAIN.visible = false;
+				portraitLeftagain.visible = false;
+				if (!portraitLeft.visible)
+				{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+				}
+				FlxG.sound.play(Paths.sound('6_shortcut', 'shared'), 0.8);
 
 
 			case 'bf':
+				portraitLeftagain.visible = false;
+				portraitLeftAGAIN.visible = false;
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fly to da fuckin fuck fuckable fucking fuck fuckin sky.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fly to da sky instance 10000" x="0" y="0" width="140" height="125" pivotX="182.45" pivotY="-27.3"/>
+	<SubTexture name="fly to da sky instance 10001" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10002" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10003" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10004" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10005" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10006" x="0" y="0" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10007" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10008" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10009" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10010" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10011" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10012" x="0" y="125" width="140" height="125"/>
+	<SubTexture name="fly to da sky instance 10013" x="0" y="125" width="140" height="125"/>
+</TextureAtlas>

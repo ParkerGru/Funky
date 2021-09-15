@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="other funny guys.png">
+	<!-- Created with Adobe Animate version 21.0.8.42666 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 7 instance 10000" x="0" y="0" width="587" height="510" pivotX="-736.1" pivotY="-65.85"/>
+	<SubTexture name="Symbol 7 instance 10001" x="0" y="0" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10002" x="587" y="0" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10003" x="587" y="0" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10004" x="1174" y="0" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10005" x="1174" y="0" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10006" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10007" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10008" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10009" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10010" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10011" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10012" x="0" y="510" width="587" height="510"/>
+	<SubTexture name="Symbol 7 instance 10013" x="0" y="510" width="587" height="510"/>
+</TextureAtlas>

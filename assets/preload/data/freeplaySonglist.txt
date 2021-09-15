@@ -1,3 +1,5 @@
+Malled-Alt:funky:1
 Malled:funky:1
 Bananas:funky:1
+Ultra-Shortcut:funky:1
 
