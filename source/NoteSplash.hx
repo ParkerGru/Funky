@@ -32,14 +32,14 @@ class NoteSplash extends FlxSprite
 
 		frames = Paths.getSparrowAtlas('noteSplashes');
 
-		animation.addByPrefix('note0-0', 'note impact 1 purple', 24, false);
-		animation.addByPrefix('note0-1', 'note impact 2 purple', 24, false);
-		animation.addByPrefix('note1-0', 'note impact 1 blue', 24, false);
-		animation.addByPrefix('note1-1', 'note impact 2 blue', 24, false);
-		animation.addByPrefix('note2-0', 'note impact 1 green', 24, false);
-		animation.addByPrefix('note2-1', 'note impact 2 green', 24, false);
-		animation.addByPrefix('note3-0', 'note impact 1 red', 24, false);
-		animation.addByPrefix('note3-1', 'note impact 2 red', 24, false);
+		animation.addByPrefix('note0-0', 'note impact 1 purple', 21, false);
+		animation.addByPrefix('note0-1', 'note impact 2 purple', 21, false);
+		animation.addByPrefix('note1-0', 'note impact 1 blue', 21, false);
+		animation.addByPrefix('note1-1', 'note impact 2 blue', 21, false);
+		animation.addByPrefix('note2-0', 'note impact 1 green', 21, false);
+		animation.addByPrefix('note2-1', 'note impact 2 green', 21, false);
+		animation.addByPrefix('note3-0', 'note impact 1 red', 21, false);
+		animation.addByPrefix('note3-1', 'note impact 2 red', 21, false);
 
 		setupNoteSplash(fromNote, x, y);
 	}
@@ -51,7 +51,7 @@ class NoteSplash extends FlxSprite
 
         visible = true;
 
-		alpha = 1;
+		alpha = 0.6;
 
 		animation.play("note" + fromNote + "-" + FlxG.random.int(0, 1), true);
 		//animation.curAnim.frameRate += Random.int(-2, 2);

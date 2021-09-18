@@ -322,17 +322,31 @@ class TitleState extends MusicBeatState
 						trace('outdated lmao! ' + returnedData[0] + ' != ' + MainMenuState.kadeEngineVer);
 						OutdatedSubState.needVer = returnedData[0];
 						OutdatedSubState.currChanges = returnedData[1];
-						FlxG.switchState(new MainMenuState());
+						var sprite:FlxSprite = new FlxSprite(0,0);
+
+                      var video:MP4Handler = new MP4Handler();
+                      video.playMP4(Paths.video('trail_er'), null, sprite); // make the transition null so it doesn't take you out of this state
+
+                      add(sprite);
 					}
 					else
 					{
-						FlxG.switchState(new MainMenuState());
+						var sprite:FlxSprite = new FlxSprite(0,0);
+
+var video:MP4Handler = new MP4Handler();
+video.playMP4(Paths.video('trail_er'), null, sprite); 
+add(sprite);
 					}
 				}
 				
 				http.onError = function (error) {
 				  trace('error: $error');
-				  FlxG.switchState(new MainMenuState()); // fail but we go anyway
+				  var sprite:FlxSprite = new FlxSprite(0,0);
+
+                  var video:MP4Handler = new MP4Handler();
+                  video.playMP4(Paths.video('trail_er'), null, sprite); // make the transition null so it doesn't take you out of this state
+
+                  add(sprite);// fail but we go anyway
 				}
 				
 				http.request();
@@ -395,7 +409,7 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 1:
-				createCoolText(['penguinSMH', 'zero', 'kyng', 'ponchy']);
+				createCoolText(['PenguinSMH', 'Zero', 'Kyng', 'Ponchy']);
 			// credTextShit.visible = true;
 			case 3:
 				addMoreText('present');
@@ -418,7 +432,7 @@ class TitleState extends MusicBeatState
 				}
 			case 7:
 				{
-				    createCoolText(['TheOnlyVolume', 'Julio', 'Punkett']);
+				    createCoolText(['TheOnlyVolume', 'Julio', 'Punkett', 'Foxx', 'Clowfoe']);
 				}
 			// credTextShit.text += '\nNewgrounds';
 			case 8:
@@ -449,6 +463,9 @@ class TitleState extends MusicBeatState
 				addMoreText('Kong'); // credTextShit.text += '\nFunkin';
 
 			case 16:
+				addMoreText('Banan');
+
+			case 17:
 				skipIntro();
 		}
 	}

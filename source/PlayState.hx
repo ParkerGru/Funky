@@ -949,7 +949,7 @@ class PlayState extends MusicBeatState
 			case 'coconut':
 				dad.x -= 690;
 				dad.y -= 25;
-				boyfriend.x -= 195;
+				boyfriend.x -= 345;
 				boyfriend.y -= 74;
 				gf.x -= 299;
 				gf.y -= 192;
@@ -957,7 +957,7 @@ class PlayState extends MusicBeatState
 				case 'ItsTBaby':
 				dad.x -= 690;
 				dad.y -= 25;
-				boyfriend.x -= 195;
+				boyfriend.x -= 345;
 				boyfriend.y -= 74;
 				gf.x -= 299;
 				gf.y -= 192;
@@ -965,7 +965,7 @@ class PlayState extends MusicBeatState
 				case 'mall-bananas':
 				dad.x -= 690;
 				dad.y -= 25;
-				boyfriend.x -= 195;
+				boyfriend.x -= 345;
 				boyfriend.y -= 74;
 				gf.x -= 299;
 				gf.y -= 192;
@@ -2008,7 +2008,7 @@ class PlayState extends MusicBeatState
 			if (FlxG.random.bool(0.1))
 			{
 				trace('GITAROO MAN EASTER EGG');
-				FlxG.switchState(new GitarooPause());
+				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 			}
 			else
 				openSubState(new PauseSubState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
